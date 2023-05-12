@@ -15,6 +15,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+import AgridLogo from './agridLogo';
+
 const AgridMail = 'hello@a-grid.com';
 const pages = [
   "Comment ça marche?",
@@ -25,18 +27,7 @@ const pages = [
   "A propos",
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const Logo = () => (
-  <IconButton
-    size="large"
-    edge="start"
-    color="inherit"
-    aria-label="menu"
-  >
-    <Link to="/">
-      <img style={{width: 'auto', maxWidth: 106}} class="wpda-builder-logo" src="https://a-grid.com/wp-content/uploads/2021/05/logo-e1666622319651.png" alt="logo" title="logo" />
-    </Link>
-  </IconButton>
-)
+
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -60,7 +51,7 @@ function ResponsiveAppBar() {
     <AppBar position="static" style={{backgroundColor: '#fff', color: '#000'}}>
     <Container maxWidth="xl">
       <Toolbar disableGutters>
-        <Logo />
+        <AgridLogo />
 
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
           <IconButton

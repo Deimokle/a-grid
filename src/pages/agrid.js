@@ -5,6 +5,7 @@ import Carousel from '../components/carousel';
 import Widget from '../components/widget';
 
 import "../styles.css"
+import Footer from '../components/footer';
 
 const mainStyle = {
   margin: 0,
@@ -17,6 +18,7 @@ const AgridPage = () => {
       <NavBar />
       <Carousel />
       <Widget />
+      <Footer />
     </main>
   )
 }
