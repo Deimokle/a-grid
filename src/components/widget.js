@@ -45,7 +45,7 @@ const Widget = () => {
       {widgets.map(({color, backgroundColor, ...w}, i) => (
         <Grid key={i} item xs={3}>
           <Card style={{ height: '100%' }}>
-            <CardHeader style={{ backgroundColor }} />
+            <CardHeader style={{ color }} />
             <CardContent>
               <w.icon style={{color, backgroundColor, display: 'block', margin: 'auto', borderRadius: 50, height: 30, width: 30}} />
               <Typography variant={"h5"} component="div">
