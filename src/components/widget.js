@@ -44,10 +44,10 @@ const Widget = () => {
     <Grid container spacing={2}>
       {widgets.map(({color, backgroundColor, ...w}, i) => (
         <Grid key={i} item xs={3}>
-          <Card style={{ height: '100%' }}>
-            <CardHeader style={{ color }} />
+          <Card style={{ height: '100%', position: 'relative' }}>
+            <CardHeader style={{ backgroundColor: color, position: 'absolute', top: -25, width: '100%' }} />
             <CardContent>
-              <w.icon style={{color, backgroundColor, display: 'block', margin: 'auto', borderRadius: 50, height: 30, width: 30}} />
+              <w.icon style={{color, backgroundColor, display: 'block', margin: 'auto', borderRadius: 50, height: 30, width: 30 }} />
               <Typography variant={"h5"} component="div">
                 {w.title}
               </Typography>
