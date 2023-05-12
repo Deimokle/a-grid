@@ -1,8 +1,9 @@
 {
-  "name": "my-gatsby-site",
+  "name": "a-grid.com",
   "version": "1.0.0",
   "private": true,
-  "description": "my-gatsby-site",
+  "description": "a-grid.com",
+  "author": "bastienlandry1",
   "keywords": [
     "gatsby"
   ],
@@ -14,8 +15,14 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^5.9.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.0",
+    "gatsby": "^5.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-router-dom": "^6.10.0"
   }
 }
