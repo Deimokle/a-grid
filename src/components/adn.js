@@ -16,7 +16,8 @@ const adnInformations = {
   sides: [
     {
       title: 'Economies',
-      data: '30%',
+      data: '30',
+      data2: '%',
       description: 'Jusqu’à 30% d’économies constatées sur les factures de nos clients actuels',
     },{
       title: 'Dépot du brevet',
@@ -25,7 +26,7 @@ const adnInformations = {
     },{
       title: 'Reconnaissance',
       data: '2021',
-      description: 'Jusqu’à 30% d’économies constatées sur les factures de nos clients actuelsAgrid est lauréat du PIA (programme des investissements d’avenir), du concours i-Lab du ministère de l’enseignement supérieur, de la recherche et de l’innovation et est reconnue par l’ADEME',
+      description: 'Agrid est lauréat du PIA (programme des investissements d’avenir), du concours i-Lab du ministère de l’enseignement supérieur, de la recherche et de l’innovation et est reconnue par l’ADEME',
     },
   ],
 }
@@ -40,15 +41,29 @@ const centerElementStyle = {
   transform: 'translateX(-50%)',
 };
 
+const sideDataStyle = {
+  ...styles.blue,
+  fontSize: 56,
+  fontWeight: 500,
+}
+const sideTitleStyle = {
+  ...styles.blue,
+  fontSize: 14,
+  fontWeight: 400,
+  textTransform: 'uppercase',
+}
 
 const Sides = () => {
   return (
     <div style={{marginLeft: 70}}>
       {adnInformations.sides.map((side, i) => (
         <Grid key={i} container>
-          <Grid item xs="6">
-            <p style={styles.blue}>{side.data}</p>
-            <p style={styles.blue}>{side.title}</p>
+          <Grid item xs="6" style={{borderRight: '1px solid grey'}}>
+            <p style={sideDataStyle} >
+              {side.data}
+            </p>
+            {side.data2 ? <span>{side.data2}</span> : ''}
+            <p style={sideTitleStyle}>{side.title}</p>
           </Grid>
           <Grid item xs="6">
             <p style={styles.blue}>{side.description}</p>
