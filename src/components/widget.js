@@ -41,13 +41,25 @@ const widgets = [
 
 const Widget = () => {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} style={{marginTop: 100, marginBottom: 50}}>
       {widgets.map(({color, backgroundColor, ...w}, i) => (
         <Grid key={i} item xs={3}>
           <Card style={{ height: '100%', position: 'relative' }}>
             <CardHeader style={{ backgroundColor: color, position: 'absolute', top: -25, width: '100%' }} />
             <CardContent>
-              <w.icon style={{color, backgroundColor, display: 'block', margin: 'auto', borderRadius: 50, height: 30, width: 30 }} />
+              <w.icon 
+                style={{
+                  color, 
+                  backgroundColor, 
+                  display: 'block', 
+                  margin: 'auto', 
+                  borderRadius: 50, 
+                  height: '40px',
+                  width: '40px',
+                  marginBottom: '30px',
+                  marginTop: '10px',
+                }} 
+              />
               <Typography variant={"h5"} component="div">
                 {w.title}
               </Typography>

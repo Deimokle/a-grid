@@ -26,7 +26,6 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <>
-      
       <hr style={hrStyle} />
       <Grid container spacing={2}>
         <Grid item xs={3}>
