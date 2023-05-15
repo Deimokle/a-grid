@@ -8,6 +8,8 @@ import {
 
 import App from '../app';
 
+import '../styles/global.css';
+
 const IndexPage = () => {
   return (
     <main>

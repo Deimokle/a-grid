@@ -2,6 +2,8 @@ import { Grid, List, ListItem, ListItemText, ListSubheader } from '@mui/material
 import * as React from 'react';
 import AgridLogo from './agridLogo';
 
+import * as styles from '../styles';
+
 const offers = [
   "Comment ça marche ?",
   "Bureaux",
@@ -19,7 +21,9 @@ const abouts = [
 ];
 
 const hrStyle = {
-
+  marginTop: 15,
+  marginBottom: 15,
+  color: '#EBEBEF',
 };
 
 const Footer = () => {
@@ -34,14 +38,16 @@ const Footer = () => {
         <Grid item xs={3}>
           <List
             subheader={
-              <ListSubheader component="div">
+              <ListSubheader component="div" style={{...styles.blue, fontSize: 20}}>
                 Nos offres
               </ListSubheader>
             }
           >
             {offers.map((offer, i) => (
               <ListItem>
-                <ListItemText>{offer}</ListItemText>
+                <ListItemText style={{...styles.blue}}>
+                  {offer}
+                </ListItemText>
               </ListItem>
             ))}
           </List>
@@ -49,14 +55,16 @@ const Footer = () => {
         <Grid item xs={3}>
           <List
             subheader={
-              <ListSubheader component="div">
+              <ListSubheader component="div" style={{...styles.blue, fontSize: 20}}>
                 A propos
               </ListSubheader>
             }
           >
             {abouts.map((offer, i) => (
               <ListItem>
-                <ListItemText>{offer}</ListItemText>
+                <ListItemText style={{...styles.blue}}>
+                  {offer}
+                </ListItemText>
               </ListItem>
             ))}
           </List>
@@ -68,7 +76,7 @@ const Footer = () => {
         <img width={78} height={27} loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2560px-LinkedIn_Logo.svg.png" />
       </div>
       <div>
-        <p>© {year} - Agrid</p>
+        <p style={{color: '#696687', fontSize: 14}}>© {year} - Agrid</p>
       </div>
     </>
   )

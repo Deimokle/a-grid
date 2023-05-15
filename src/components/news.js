@@ -1,6 +1,8 @@
 import { Box, Card, CardContent } from '@mui/material';
 import * as React from 'react';
 
+import { blue, secondaryBlue } from '../styles';
+
 const dataNews = [
   {
     title: "Ces start-ups qui économisent l'énergie des bureaux",
@@ -14,17 +16,18 @@ const dataNews = [
 const News = () => {
   return (
     <>
-      <Box>
+      <Box style={{position: 'relative', padding: '50px 0px 50px 0px', marginBottom: 50}}>
+        <div style={{height: '100%', width: '100%', backgroundColor: '#E6E6E6', position: 'absolute', top: 0, left: 0}}></div>
         {dataNews.map((data, i) => (
-          <Card key={i} sx={{ display: 'flex' }}>
+          <Card key={i} sx={{ display: 'flex', position: 'relative' }}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flex: '1 0 auto' }}>
-                <p>{data.title}</p>
+                <p style={{...secondaryBlue, textAlign: 'center', fontSize: 30}}>{data.title}</p>
               </CardContent>
             </Box>
             <CardContent sx={{ }}>
-              <p>{data.description}</p>
-              <p>{data.date}</p>
+              <p style={{...blue, fontSize: 18}}>{data.description}</p>
+              <p style={{fontSize: 13}}>{data.date}</p>
             </CardContent>
           </Card>
         ))}

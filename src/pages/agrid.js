@@ -4,9 +4,10 @@ import NavBar from '../components/navbar';
 import Carousel from '../components/carousel';
 import Widget from '../components/widget';
 
-import Footer from '../components/footer';
-import Contact from '../components/contact';
 import Adn from '../components/adn';
+import News from '../components/news';
+import Contact from '../components/contact';
+import Footer from '../components/footer';
 
 const mainStyle = {
   margin: 0,
@@ -20,6 +21,7 @@ const AgridPage = () => {
       <Carousel />
       <Widget />
       <Adn />
+      <News />
       <Contact />
       <Footer />
     </main>
