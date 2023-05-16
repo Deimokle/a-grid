@@ -18,7 +18,7 @@ const AgridPage = () => {
   return (
     <main style={mainStyle}>
       <NavBar />
-      <Carousel />
+      {/* <Carousel /> */}
       <Widget />
       <Adn />
       <News />

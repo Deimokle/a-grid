@@ -41,7 +41,7 @@ const widgets = [
 
 const Widget = () => {
   return (
-    <Grid container spacing={2} style={{marginTop: 100, marginBottom: 50}}>
+    <Grid container style={{margin: '100px 0 50px 0', padding:'0 8% 0 8%'}}>
       {widgets.map(({color, backgroundColor, ...w}, i) => (
         <Grid key={i} item xs={3}>
           <Card style={{ height: '100%', position: 'relative' }}>
